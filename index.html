@@ -91,6 +91,9 @@
                 opacity: 0;
             }
         }
+
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
     </style>
 </head>
 
@@ -173,7 +176,7 @@
     </nav>
     
     <!-- HERO SLIDER -->
-    <section class="relative h-screen overflow-hidden">
+    <section class="py-20" data-aos="zoom-in">
     
         <!-- Slides -->
         <div class="slides">
@@ -220,7 +223,7 @@
     </section>
 
     <!-- SAMBUTAN -->
-    <section class="py-20 bg-white">
+    <section class="py-20" data-aos="fade-up">
     
         <div class="container mx-auto px-6 md:px-16">
     
@@ -303,7 +306,7 @@
     </section>
 
     <!-- DOSEN -->
-    <section class="py-20 bg-white">
+   <section class="py-20" data-aos="fade-right">
     
         <div class="container mx-auto px-6 md:px-16">
     
@@ -411,7 +414,7 @@
     </section>
 
         <!-- STATISTIK -->
-    <section class="py-20 bg-[#6B0F1A] text-white">
+   <section class="py-20" data-aos="fade-up">
     
         <div class="container mx-auto px-6 md:px-16">
     
@@ -486,7 +489,7 @@
     </section>
 
         <!-- GALERI -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-20" data-aos="zoom-in">
     
         <div class="container mx-auto px-6 md:px-16">
     
@@ -573,7 +576,7 @@
     </section>
 
         <!-- BERITA -->
-    <section class="py-20 bg-white">
+    <section class="py-20" data-aos="fade-up">
     
         <div class="container mx-auto px-6 md:px-16">
     
@@ -784,6 +787,15 @@
     });
     
     </script>
-        
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+    AOS.init({
+        duration: 1200,
+        once: true
+    });
+    </script>
+    
 </body>
 </html>
