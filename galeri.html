@@ -37,6 +37,20 @@ body{
 
 <body>
 
+     <!-- LOADING SCREEN -->
+    <div id="loader"
+         class="fixed inset-0 bg-[#3B0710] flex flex-col items-center justify-center z-[9999]">
+    
+        <div class="w-20 h-20 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin mb-6">
+        </div>
+    
+        <h1 class="text-white text-3xl title-font">
+            Pendidikan Ekonomi UNIAS
+        </h1>
+    
+    </div>
+
+
 <!-- NAVBAR -->
 <nav class="bg-[#6B0F1A] text-white p-4 shadow-lg fixed w-full z-50">
 
@@ -237,5 +251,29 @@ body{
     });
     </script>
 
+    <script>
+
+    window.addEventListener("load", function(){
+    
+        const loader = document.getElementById("loader");
+    
+        setTimeout(() => {
+    
+            loader.style.opacity = "0";
+    
+            loader.style.transition = "0.8s";
+    
+            setTimeout(() => {
+    
+                loader.style.display = "none";
+    
+            }, 800);
+    
+        }, 1200);
+    
+    });
+    
+    </script>
+    
 </body>
 </html>
