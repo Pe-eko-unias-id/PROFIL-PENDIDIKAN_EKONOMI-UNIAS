@@ -29,10 +29,11 @@ body{
 <body>
 
 <!-- NAVBAR -->
-<nav class="bg-[#6B0F1A] text-white p-4 shadow-lg">
+<nav class="bg-[#6B0F1A] text-white p-4 shadow-lg fixed w-full z-50">
 
     <div class="container mx-auto flex justify-between items-center">
 
+        <!-- LOGO -->
         <div class="flex items-center gap-3">
 
             <img src="assets/img/LOGO-UNIAS.png"
@@ -52,6 +53,7 @@ body{
 
         </div>
 
+        <!-- MENU DESKTOP -->
         <ul class="hidden md:flex gap-6 font-medium">
 
             <li><a href="index.html" class="hover:text-yellow-400">Beranda</a></li>
@@ -64,7 +66,37 @@ body{
 
             <li><a href="galeri.html" class="hover:text-yellow-400">Galeri</a></li>
 
-            <li><a href="kontak.html" class="text-yellow-400">Kontak</a></li>
+            <li><a href="kontak.html" class="hover:text-yellow-400">Kontak</a></li>
+
+        </ul>
+
+        <!-- BUTTON MOBILE -->
+        <button id="menu-btn"
+                class="md:hidden text-3xl">
+
+            ☰
+
+        </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+         class="hidden md:hidden mt-4 bg-[#6B0F1A] rounded-2xl p-6">
+
+        <ul class="flex flex-col gap-4 font-medium text-center">
+
+            <li><a href="index.html">Beranda</a></li>
+
+            <li><a href="profil.html">Profil</a></li>
+
+            <li><a href="dosen.html">Dosen</a></li>
+
+            <li><a href="akademik.html">Akademik</a></li>
+
+            <li><a href="galeri.html">Galeri</a></li>
+
+            <li><a href="kontak.html">Kontak</a></li>
 
         </ul>
 
@@ -206,6 +238,17 @@ body{
 💬
 
 </a>
+
+    <script>
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+    
+    </script>
 
 </body>
 </html>
