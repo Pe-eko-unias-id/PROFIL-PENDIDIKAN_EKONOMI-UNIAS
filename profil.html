@@ -29,49 +29,81 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="bg-[#6B0F1A] text-white p-4 shadow-lg">
-
+      <nav class="bg-[#6B0F1A] text-white p-4 shadow-lg fixed w-full z-50">
+    
         <div class="container mx-auto flex justify-between items-center">
-
+    
+            <!-- LOGO -->
             <div class="flex items-center gap-3">
-
+    
                 <img src="assets/img/LOGO-UNIAS.png"
                      class="w-12 h-12 rounded-full">
-
+    
                 <div>
-
+    
                     <h1 class="title-font text-lg font-bold">
                         Pendidikan Ekonomi
                     </h1>
-
+    
                     <p class="text-sm text-gray-200">
                         Universitas Nias
                     </p>
-
+    
                 </div>
-
+    
             </div>
-
+    
+            <!-- MENU DESKTOP -->
             <ul class="hidden md:flex gap-6 font-medium">
-
+    
                 <li><a href="index.html" class="hover:text-yellow-400">Beranda</a></li>
-
-                <li><a href="profil.html" class="text-yellow-400">Profil</a></li>
-
+    
+                <li><a href="profil.html" class="hover:text-yellow-400">Profil</a></li>
+    
                 <li><a href="dosen.html" class="hover:text-yellow-400">Dosen</a></li>
-
+    
                 <li><a href="akademik.html" class="hover:text-yellow-400">Akademik</a></li>
-
+    
                 <li><a href="galeri.html" class="hover:text-yellow-400">Galeri</a></li>
-
+    
                 <li><a href="kontak.html" class="hover:text-yellow-400">Kontak</a></li>
-
+    
             </ul>
-
+    
+            <!-- BUTTON MOBILE -->
+            <button id="menu-btn"
+                    class="md:hidden text-3xl">
+    
+                ☰
+    
+            </button>
+    
         </div>
-
+    
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu"
+             class="hidden md:hidden mt-4 bg-[#6B0F1A] rounded-2xl p-6">
+    
+            <ul class="flex flex-col gap-4 font-medium text-center">
+    
+                <li><a href="index.html">Beranda</a></li>
+    
+                <li><a href="profil.html">Profil</a></li>
+    
+                <li><a href="dosen.html">Dosen</a></li>
+    
+                <li><a href="akademik.html">Akademik</a></li>
+    
+                <li><a href="galeri.html">Galeri</a></li>
+    
+                <li><a href="kontak.html">Kontak</a></li>
+    
+            </ul>
+    
+        </div>
+    
     </nav>
-
+    
     <!-- HERO -->
     <section class="relative h-[60vh] flex items-center justify-center text-center text-white">
 
@@ -174,6 +206,17 @@
         </p>
 
     </footer>
+
+    <script>
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+    
+    </script>
 
 </body>
 </html>
