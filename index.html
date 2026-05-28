@@ -44,6 +44,53 @@
         .gold-text{
             color: #D4AF37;
         }
+
+                .slide{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: slideShow 16s infinite;
+        }
+        
+        .slide:nth-child(1){
+            animation-delay: 0s;
+        }
+        
+        .slide:nth-child(2){
+            animation-delay: 4s;
+        }
+        
+        .slide:nth-child(3){
+            animation-delay: 8s;
+        }
+        
+        .slide:nth-child(4){
+            animation-delay: 12s;
+        }
+        
+        @keyframes slideShow{
+            0%{
+                opacity: 0;
+            }
+        
+            10%{
+                opacity: 1;
+            }
+        
+            25%{
+                opacity: 1;
+            }
+        
+            35%{
+                opacity: 0;
+            }
+        
+            100%{
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -78,31 +125,51 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="h-screen flex items-center justify-center text-center text-white relative">
-
-        <img src="assets/img/slider1.jpg"
-             class="absolute w-full h-full object-cover">
-
-        <div class="absolute inset-0 bg-black/60"></div>
-
-        <div class="relative z-10 px-4">
-
-            <h1 class="title-font text-4xl md:text-6xl font-bold mb-6">
-                Program Studi Pendidikan Ekonomi
-            </h1>
-
-            <p class="text-lg md:text-2xl mb-8">
-                Membangun Masa Depan Melalui Pendidikan Ekonomi yang Unggul
-            </p>
-
-            <a href="#"
-               class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-full font-semibold transition">
-                Jelajahi
-            </a>
-
+    <!-- HERO SLIDER -->
+    <section class="relative h-screen overflow-hidden">
+    
+        <!-- Slides -->
+        <div class="slides">
+    
+            <img src="assets/img/slider1.jpg"
+                 class="slide active">
+    
+            <img src="assets/img/slider2.jpg"
+                 class="slide">
+    
+            <img src="assets/img/slider3.jpg"
+                 class="slide">
+    
+            <img src="assets/img/slider4.jpg"
+                 class="slide">
+    
         </div>
-
+    
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+    
+        <!-- Content -->
+        <div class="absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+    
+            <div>
+    
+                <h1 class="title-font text-4xl md:text-6xl font-bold text-white mb-6">
+                    Program Studi Pendidikan Ekonomi
+                </h1>
+    
+                <p class="text-lg md:text-2xl text-gray-200 mb-8">
+                    Membangun Masa Depan Melalui Pendidikan Ekonomi yang Unggul
+                </p>
+    
+                <a href="#"
+                   class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-full font-semibold transition duration-300">
+                    Jelajahi Website
+                </a>
+    
+            </div>
+    
+        </div>
+    
     </section>
 
 </body>
